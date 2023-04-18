@@ -84,10 +84,10 @@ function buttonSendText(sampleText) {
     $("#chatbox").append(userHtml);
     document.getElementById("chat-bar-bottom").scrollIntoView(true);
 
-    //Uncomment this if you want the bot to respond to this buttonSendText event
-    // setTimeout(() => {
-    //     getHardResponse(sampleText);
-    // }, 1000)
+    //Bot responding thankyou
+    setTimeout(() => {
+        getHardResponse("heart clicked");
+    }, 250)
 }
 
 function sendButton() {
@@ -100,7 +100,7 @@ function heartButton() {
 
 // Press enter to send a message
 $("#textInput").keypress(function (e) {
-    if (e.which == 13) {        /*Which key was presses and if it is equal to enter having key code 13*/
+    if (e.which == 13) {        /Which key was presses and if it is equal to enter having key code 13/
         getResponse();
     }
 });
